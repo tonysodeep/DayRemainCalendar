@@ -1,19 +1,15 @@
 # Simple Calendar
 <img alt="Logo" src="fastlane/metadata/android/en-US/images/icon.png" width="120" />
 
-A simple calendar with events and a customizable widget.
+This app i build base on base source code of https://www.simplemobiletools.com
+https://github.com/SimpleMobileTools/Simple-Calendar
 
-A simple calendar with optional CalDAV synchronization. You can easily create recurring events and setup reminders, it can also display week numbers.
+A simple calendar with events and a customizable widget with feature allow user to add date user want to die and it will count down to that day.
+User can add event and it will tell how much time to do that to the day you die.
 
-Contains a monthly view and an event list widget where you can customize the color of the text, as well as the alpha and the color of the background.
+Ideal come from my mentor to show us to respectful our life more
 
-Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
 
-The Storage permission is needed only for exporting or importing events from .ics files.
-
-The Contacts permission is used only at importing contact birthdays and anniversaries.
-
-This app is just one piece of a bigger series of apps. You can find the rest of them at https://www.simplemobiletools.com
 
 <a href='https://play.google.com/store/apps/details?id=com.simplemobiletools.calendar.pro'><img src='https://simplemobiletools.com/assets/images/google-play.png' alt='Get it on Google Play' height='45' /></a>
 <a href='https://f-droid.org/packages/com.simplemobiletools.calendar.pro'><img src='https://simplemobiletools.com/assets/images/f-droid.png' alt='Get it on F-Droid' height='45' /></a>

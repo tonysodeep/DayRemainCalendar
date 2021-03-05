@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="152dp"
+    android:layout_height="204dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="17dp"
+    android:background="@color/picked_date_bg"
+    android:elevation="6dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/picked_date_bg">
+
+        <ImageView
+            android:id="@+id/im_main"
+            android:layout_width="152dp"
+            android:layout_height="102dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_av"
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="12dp"
+            android:text="Core Yoga"
+            android:textColor="@color/main_tab_text"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/im_main" />
+
+        <RelativeLayout
+            android:id="@+id/ll_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toTopOf="@id/ll_02"
+            app:layout_constraintTop_toBottomOf="@id/tv_topic">
+
+            <ImageView
+                android:id="@+id/im_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_duration" />
+
+            <TextView
+                android:layout_toEndOf="@id/im_icon"
+                android:layout_marginLeft="7dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05:30 minites"
+                android:textColor="@color/main_tab_text"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_01">
+
+            <ImageView
+                android:id="@+id/im_icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_duration" />
+
+            <TextView
+                android:layout_toRightOf="@id/im_icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_centerVertical="true"
+                android:text="05:30 minites"
+                android:textColor="@color/main_tab_text"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

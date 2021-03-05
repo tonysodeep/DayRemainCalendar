@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base"/>
+
+    <style name="DayView">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/day_text_size</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="MetaView" parent="DayView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/meta_text_size</item>
+    </style>
+
+    <style name="WeekNumberStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">top|center_horizontal</item>
+        <item name="android:textSize">@dimen/day_monthly_text_size</item>
+        <item name="android:textColor">@color/default_text_color</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="ArrowStyle">
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="MonthStyle">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="main_week_goal">
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/round_button</item>
+    </style>
+
+    <style name="main_day">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:height">56dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:background">@drawable/round_corrner</item>
+    </style>
+
+
+    <style name="MyDatePickerStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/calendar_accent</item>
+        <!--selected Item color-->
+        <!-- arrow bordercolor(<>)-->
+        <item name="android:selectableItemBackgroundBorderless">@color/calendar_switch_bt</item>
+        <!-- Highlight item color-->
+        <item name="colorControlHighlight">@color/calendar_color_control_highlight</item>
+        <!--Calender Background color -->
+        <item name="android:windowBackground">@color/calendar_bg</item>
+        <!-- Ok Cancel Color-->
+        <item name="android:textColor">@color/calendar_text_primary</item>
+        <!-- Week TextColor-->
+        <item name="android:textColorSecondary">@color/calendar_text_secondary</item>
+        <!-- Calender Number color arrow color (< >) -->
+        <item name="android:textColorPrimary">@color/calendar_text_primary</item>
+        <!--day , month-->
+        <item name="android:textColorPrimaryInverse">@color/calendar_text_primary_inverse</item>
+        <!-- year-->
+        <item name="android:textColorSecondaryInverse">@color/calendar_text_secondary</item>
+    </style>
+
+
+    <style name="picked_date_sub">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/picked_date_text_date_month_year</item>
+
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="picked_date_main">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/picked_date_text_primary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>

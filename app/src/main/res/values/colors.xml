@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_text">@color/md_red_400_dark</color>
+    <color name="default_birthdays_color">@color/md_blue_800</color>
+    <color name="default_holidays_color">@color/md_green_700</color>
+    <color name="default_anniversaries_color">@color/md_red_400_dark</color>
+    
+    <color name="get_start_act_text_color">#FFFFFF</color>
+    <color name="get_start_act_other">#E97171</color>
+    
+    
+    <color name="main_tab_bg">#FFFFFF</color>
+    <color name="main_selected_color_nav_whole_text">#E97171</color>
+    <color name="main_un_selected_color_nav_whole_text">#C4C4C4</color>
+    <color name="main_tab_text">#000000</color>
+    <color name="main_tab_sub_text">#494949</color>
+    <color name="main_selected_color_border_cir">#70E97171</color>
+    <color name="main_selected_color_text_cir">#D4E97171</color>
+    <color name="main_un_selected_color_border_cir">#DCDADA</color>
+    <color name="main_un_selected_color_text_cir">#4F000000</color>
+    <color name="main_line">#E0DEDE</color>
+    <color name="main_text_date_month">#636262</color>
+    <color name="main_text_date_year">#E97171</color>
+
+    <color name="calendar_bg">#FFFFFF</color>
+    <color name="calendar_accent">#E97171</color>
+    <color name="calendar_text_primary_inverse">#FFFFFF</color>
+    <color name="calendar_color_active">#FFFFFF</color>
+    <color name="calendar_color_control_highlight">#66E97171</color>
+    <color name="calendar_text_primary">#000000</color>
+    <color name="calendar_switch_bt">#FFFFFF</color>
+    <color name="calendar_text_secondary">#9C9A9A</color>
+    <color name="calendar_text_color"> </color>
+    
+    <color name="picked_date_bg">#FFFFFF</color>
+    <color name="picked_date_text_white">#FFFFFF</color>
+    <color name="picked_date_text_primary">#CC000000</color>
+    <color name="picked_date_text_secondary">#000000</color>
+    <color name="picked_date_bt_bg">#E97171</color>
+    <color name="picked_date_text_date_month_year">#6C6C6C</color>
+
+
+    <color name="frag_home_text">#494949</color>
+    <color name="frag_home_text_year_num">#E97171</color>
+    <color name="frag_home_text_year">#6C6C6C</color>
+
+    <color name="frag_report_bg">#FFFFFF</color>
+    <color name="frag_report_text">#CC000000</color>
+    
+
+
+
+</resources>

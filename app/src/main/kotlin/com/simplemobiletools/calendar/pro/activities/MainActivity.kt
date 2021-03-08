@@ -184,7 +184,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         if (!isChangingConfigurations) {
             EventsDatabase.destroyInstance()
             stopCalDAVUpdateListener()
-            setResult(Activity.RESULT_OK)
+
         }
     }
 
@@ -709,6 +709,8 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         resetActionBarTitle()
         calendar_fab.beVisible()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
+
     }
 
     fun openDayFromMonthly(dateTime: DateTime) {
@@ -725,6 +727,8 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         try {
             supportFragmentManager.beginTransaction().add(R.id.fragments_holder, fragment).commitNow()
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
+
 
         } catch (e: Exception) {
         }
@@ -756,6 +760,9 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
         calendar_fab.beGoneIf(currentFragments.size == 1 && config.storedView == YEARLY_VIEW)
         supportActionBar?.setDisplayHomeAsUpEnabled(currentFragments.size > 1)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_arrow_back_24)
+
     }
 
     private fun refreshViewPager() {

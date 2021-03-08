@@ -62,4 +62,22 @@ class CalendaDB(var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
         result.close()
         return list
     }
+    fun readLastEventData():ArrayList<PickDateModel>{
+        var list = ArrayList<PickDateModel>()
+        val db = this.readableDatabase
+        val query = "SELECT $TABLE_NAME.$COL_EVENT_DATE_MONTH, $TABLE_NAME.$COL_EVENT_YEAR, $TABLE_NAME.$COL_EVENT_NAME, $TABLE_NAME.$COL_EVENT_DESCRIPTION FROM $TABLE_NAME ORDER BY ID DESC LIMIT 1"
+        val result = db.rawQuery(query,null)
+        if(result.moveToFirst()){
+            do {
+                var eventDateMonth = result.getString(result.getColumnIndex(COL_EVENT_DATE_MONTH))
+                var eventYear = result.getString(result.getColumnIndex(COL_EVENT_YEAR))
+                var eventTitle = result.getString(result.getColumnIndex(COL_EVENT_NAME))
+                var eventDescription = result.getString(result.getColumnIndex(COL_EVENT_DESCRIPTION))
+                var eventRVModel = PickDateModel(eventDateMonth,eventYear,eventTitle,eventDescription)
+                list.add(eventRVModel)
+            }while (result.moveToNext())
+        }
+        result.close()
+        return list
+    }
 }

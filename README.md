@@ -9,6 +9,7 @@ User can add event and it will tell how much time to do that to the day you die.
 
 Ideal come from my mentor to show us to respectful our life more
 
+## My app will be continute update more amazing feature
 
 
 <a href='https://play.google.com/store/apps/details?id=com.simplemobiletools.calendar.pro'><img src='https://simplemobiletools.com/assets/images/google-play.png' alt='Get it on Google Play' height='45' /></a>

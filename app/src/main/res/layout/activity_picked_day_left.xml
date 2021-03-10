@@ -10,8 +10,8 @@
     <RelativeLayout
         android:id="@+id/heding"
         android:layout_width="match_parent"
-        android:layout_marginStart="102dp"
         android:layout_height="184dp"
+        android:layout_marginStart="102dp"
         android:layout_marginTop="100dp"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -43,89 +43,185 @@
             android:textSize="20sp" />
 
     </RelativeLayout>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_picked_date"
         android:layout_width="210dp"
         android:layout_height="56dp"
-        app:layout_constraintTop_toBottomOf="@id/heding"
+        android:layout_marginTop="95dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@id/line_midel"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="95dp"
-        app:cardCornerRadius="8dp"
-        android:elevation="8dp">
+        app:layout_constraintTop_toBottomOf="@id/heding">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
                 android:id="@+id/tv_day"
+                style="@style/picked_date_sub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="day"
                 app:layout_constraintBottom_toTopOf="@id/tv_picked_day"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toLeftOf="@id/tv_month"
-                style="@style/picked_date_sub"
-                android:text="day"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/tv_month"
+                style="@style/picked_date_sub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
+                android:text="mon"
                 app:layout_constraintLeft_toRightOf="@id/tv_day"
                 app:layout_constraintRight_toLeftOf="@id/tv_year"
-                style="@style/picked_date_sub"
-                android:text="mon"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
-                app:layout_constraintRight_toRightOf="parent"
                 android:id="@+id/tv_year"
+                style="@style/picked_date_sub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
+                android:text="year"
                 app:layout_constraintLeft_toRightOf="@id/tv_month"
-                style="@style/picked_date_sub"
-                android:text="year"/>
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/tv_picked_day"
+                style="@style/picked_date_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="29"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_day"
                 app:layout_constraintStart_toStartOf="@id/tv_day"
-                style="@style/picked_date_main"
-                android:text="29"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_day" />
+
             <TextView
                 android:id="@+id/tv_picked_month"
+                style="@style/picked_date_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="29"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_day"
                 app:layout_constraintStart_toStartOf="@id/tv_month"
-                style="@style/picked_date_main"
-                android:text="29"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_day" />
+
             <TextView
                 android:id="@+id/tv_picked_year"
+                style="@style/picked_date_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="29"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_day"
                 app:layout_constraintStart_toStartOf="@id/tv_year"
-                style="@style/picked_date_main"
-                android:text="29"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_day" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-    
+
+    <View
+        android:id="@+id/line_midel"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="@color/get_start_act_other"
+        app:layout_constraintTop_toBottomOf="@+id/card_picked_date"
+        app:layout_constraintBottom_toTopOf="@+id/card_picked_time"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_picked_time"
+        android:layout_width="210dp"
+        android:layout_height="56dp"
+
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_midel"
+        app:layout_constraintBottom_toTopOf="@+id/bt_toMain">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_hours"
+                style="@style/picked_date_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hours"
+                app:layout_constraintBottom_toTopOf="@id/tv_picked_hours"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_minus"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_minus"
+                style="@style/picked_date_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="min"
+                app:layout_constraintLeft_toRightOf="@id/tv_hours"
+                app:layout_constraintRight_toLeftOf="@id/tv_second"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_second"
+                style="@style/picked_date_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sec"
+                app:layout_constraintLeft_toRightOf="@id/tv_minus"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_picked_hours"
+                style="@style/picked_date_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_hours"
+                app:layout_constraintTop_toBottomOf="@id/tv_hours" />
+
+            <TextView
+                android:id="@+id/tv_picked_minute"
+                style="@style/picked_date_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_minus"
+                app:layout_constraintTop_toBottomOf="@id/tv_minus" />
+
+            <TextView
+                android:id="@+id/tv_picked_second"
+                style="@style/picked_date_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_second"
+                app:layout_constraintTop_toBottomOf="@id/tv_second" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/bt_toMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="62dp"
         android:background="@drawable/border_bt_pickday"
         android:text="Start"
-        android:layout_marginBottom="62dp"
         android:textColor="@color/get_start_act_text_color"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

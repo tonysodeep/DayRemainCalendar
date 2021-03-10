@@ -1,5 +1,6 @@
 package com.simplemobiletools.calendar.pro
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.simplemobiletools.calendar.pro.activities.EventActivity
 import com.simplemobiletools.calendar.pro.adapter2.PickedDateAdapter
 import com.simplemobiletools.calendar.pro.iterfaces.ItemClickEvent
 import com.simplemobiletools.calendar.pro.model.PickDateModel
@@ -22,6 +24,7 @@ import java.time.temporal.ChronoUnit
 class ReportFragmentTemp : Fragment(),ItemClickEvent {
     lateinit var rootView: View
     lateinit var reportAdapter: PickedDateAdapter
+    lateinit var calendaDB: CalendaDB
     @RequiresApi(Build.VERSION_CODES.O)
     var formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd MMM, yyyy")
     lateinit var arrayList: ArrayList<PickDateModel>
@@ -41,7 +44,7 @@ class ReportFragmentTemp : Fragment(),ItemClickEvent {
     @RequiresApi(Build.VERSION_CODES.O)
     fun createDataBase() {
         arrayList = ArrayList()
-        val calendaDB = CalendaDB(activity as MainActivityWithTabs)
+        calendaDB = CalendaDB(activity as MainActivityWithTabs)
         arrayList.addAll(calendaDB.readEventData())
         addDateLeft(calendaDB.readEventData())
     }
@@ -59,6 +62,15 @@ class ReportFragmentTemp : Fragment(),ItemClickEvent {
     }
 
     override fun itemClick() {
-        Toast.makeText(activity as MainActivityWithTabs,"click bait",Toast.LENGTH_LONG).show()
+        val intent = Intent(activity as MainActivityWithTabs,EventActivity::class.java)
+        startActivity(intent)
     }
+
+//    @RequiresApi(Build.VERSION_CODES.O)
+//    override fun onResume() {
+//        super.onResume()
+//        val pickDateModel = calendaDB.readLastEventData()
+//        arrayList.add(pickDateModel[0])
+//        rootView.report_rv.adapter?.notifyDataSetChanged()
+//    }
 }
